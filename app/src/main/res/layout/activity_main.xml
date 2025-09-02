@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="#F0F0F0">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vestidor Virtual"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp" />
+
+        <FrameLayout
+            android:id="@+id/personajeContainer"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:elevation="4dp">
+
+            <ImageView
+                android:id="@+id/personajeBase"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/personaje_base"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/camisaImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/personaje_camisa"
+                android:scaleType="fitCenter"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/pantalonImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/personaje_pantalon"
+                android:scaleType="fitCenter"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/zapatosImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/personaje_zapatos"
+                android:scaleType="fitCenter"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingStart="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <Button
+                    android:id="@+id/btnCamisa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="👕 Camisa"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#4CAF50" />
+
+                <Button
+                    android:id="@+id/btnPantalon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="👖 Pantalón"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#2196F3" />
+
+                <Button
+                    android:id="@+id/btnZapatos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="👟 Zapatos"
+                    android:textSize="16sp"
+                    android:backgroundTint="#FF9800" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Camisa:"
+                        android:textSize="14sp"
+                        android:textColor="#4CAF50"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/progressCamisa"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressTint="#4CAF50" />
+
+                    <TextView
+                        android:id="@+id/textCamisa"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textSize="12sp"
+                        android:textColor="#4CAF50"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Pantalón:"
+                        android:textSize="14sp"
+                        android:textColor="#2196F3"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/progressPantalon"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressTint="#2196F3" />
+
+                    <TextView
+                        android:id="@+id/textPantalon"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textSize="12sp"
+                        android:textColor="#2196F3"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Zapatos:"
+                        android:textSize="14sp"
+                        android:textColor="#FF9800"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/progressZapatos"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressTint="#FF9800" />
+
+                    <TextView
+                        android:id="@+id/textZapatos"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textSize="12sp"
+                        android:textColor="#FF9800"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selecciona una prenda para vestir al personaje"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:padding="16dp"
+                android:elevation="2dp"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
